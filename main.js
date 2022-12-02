@@ -1,10 +1,11 @@
 const menuemail = document.querySelector(".navbar-email");
 const desktopmenu = document.querySelector(".desktop-menu");
 const menucarritoicon = document.querySelector(".navbar-shopping-cart");
-const aside = document.querySelector(".product-detail");
+const shoppingCartContainer = document.querySelector("#shoppingCartContainer");
 const menuicon = document.querySelector(".menu");
 const mobilemenu = document.querySelector(".mobile-menu");
 const cardsContainer = document.querySelector(".cards-container")
+
 const productDetailContainer = document.querySelector(".product-details")
 
 menuemail.addEventListener("click", toggledesktopmenu);
@@ -14,10 +15,10 @@ menucarritoicon.addEventListener(`click`, togglecarritoaside);
 
 function toggledesktopmenu() { 
 
-    const isasideclosed= aside.classList.contains(`inactive`);
+    const isasideclosed= shoppingCartContainer.classList.contains(`inactive`);
 
     if(!isasideclosed){
-       aside.classList.add(`inactive`);
+        shoppingCartContainer.classList.add(`inactive`);
        }
 
    desktopmenu.classList.toggle(`inactive`);
@@ -25,17 +26,17 @@ function toggledesktopmenu() {
 
 function togglemobilemenu(){  
     
-    const isasideclosed= aside.classList.contains(`inactive`);
+    const isasideclosed= shoppingCartContainer.classList.contains(`inactive`);
 
     if(!isasideclosed){
-       aside.classList.add(`inactive`);
+        shoppingCartContainer.classList.add(`inactive`);
        }
          
     mobilemenu.classList.toggle(`inactive`);
 }
 
 const ismobilemenuclosed= mobilemenu.classList.contains(`inactive`);
-const isasideclosed= aside.classList.contains(`inactive`);
+const isasideclosed= shoppingCartContainer.classList.contains(`inactive`);
 
 function togglecarritoaside(){
     const ismobilemenuclosed= mobilemenu.classList.contains(`inactive`);
@@ -44,7 +45,7 @@ function togglecarritoaside(){
     mobilemenu.classList.add(`inactive`);
    }
 
-    aside.classList.toggle(`inactive`)
+   shoppingCartContainer.classList.toggle(`inactive`)
 
  }
 
